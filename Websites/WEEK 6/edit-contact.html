@@ -4,7 +4,7 @@
         <title></title>
     </head>
     <body onload="getContact()">
-        <div id="editForm"></div>
+        <div id="avatarImage"></div>
         <br/>
         <form id="editForm">
             <label for="firstname">First Name</label>
@@ -27,7 +27,7 @@
         
         <script src="config.js"></script>
         <script>
-            document.getElementById("homeLink0").addEventListener('click', homeLink);
+            document.getElementById("homeLink").addEventListener('click', homeLink);
             document.getElementById("editContact").addEventListener('click', editContact);
             document.getElementById("submitForm").addEventListener('click', submitForm);
             document.getElementById("deleteContact").addEventListener('click', deleteContact);
@@ -57,7 +57,7 @@
 
             function displayOutput(data){
                 avatarImg = `
-                    <img src="${rootPath}/controller/uploads/${data[0].avatar}" width="200" />
+                    <img src="${rootPath}controller/uploads/${data[0].avatar}" width="200" />
                 
                 `
                 document.getElementById("avatarImage").innerHTML = avatarImg;
